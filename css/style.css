@@ -1,0 +1,113 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#000;
+font-family:Arial;
+overflow:hidden;
+}
+
+.scene{
+display:flex;
+gap:40px;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+/* CLOCK */
+.clock{
+width:420px;
+height:420px;
+border:2px solid white;
+border-radius:50%;
+position:relative;
+}
+
+/* NUMBERS */
+.num{
+position:absolute;
+color:#b026ff;
+font-family:Caveat;
+font-size:22px;
+text-shadow:0 0 10px #b026ff;
+}
+
+/* rough positions */
+.n1{top:40px;right:110px;}
+.n2{top:80px;right:60px;}
+.n3{top:170px;right:20px;}
+.n4{bottom:80px;right:60px;}
+.n5{bottom:40px;right:110px;}
+.n6{bottom:20px;left:50%;}
+.n7{bottom:40px;left:110px;}
+.n8{bottom:80px;left:60px;}
+.n9{left:20px;top:170px;}
+.n10{top:80px;left:60px;}
+.n11{top:40px;left:110px;}
+.n12{top:10px;left:50%;}
+
+/* SPIDER */
+.spider{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:60px;
+}
+
+/* HANDS */
+.hand{
+position:absolute;
+bottom:50%;
+left:50%;
+transform-origin:bottom;
+background:#b026ff;
+border-radius:10px;
+}
+
+.hour{width:6px;height:90px;}
+.minute{width:4px;height:120px;background:#8be9fd;}
+.second{width:2px;height:150px;background:white;}
+
+/* GEARS */
+.gear{
+position:absolute;
+border:2px solid #b026ff;
+border-radius:50%;
+animation:spin 8s linear infinite;
+opacity:0.7;
+}
+
+.g1{width:120px;height:120px;top:20px;left:20px;}
+.g2{width:90px;height:90px;top:30px;right:30px;}
+.g3{width:140px;height:140px;bottom:20px;right:20px;}
+.g4{width:100px;height:100px;bottom:40px;left:30px;}
+
+@keyframes spin{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+}
+
+/* CODE BOX */
+.code-box{
+width:300px;
+height:200px;
+border:1px solid white;
+padding:15px;
+color:#8be9fd;
+}
+
+/* SIGN */
+.signature{
+position:fixed;
+bottom:10px;
+left:50%;
+transform:translateX(-50%);
+color:#b026ff;
+letter-spacing:8px;
+text-shadow:0 0 10px #b026ff;
+}

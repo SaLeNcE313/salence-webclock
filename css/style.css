@@ -10,14 +10,14 @@ height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-font-family:Arial;
 overflow:hidden;
+font-family:Arial;
 }
 
-/* layout */
+/* CENTER WRAPPER */
 .scene{
 display:flex;
-gap:50px;
+gap:60px;
 align-items:center;
 }
 
@@ -25,12 +25,12 @@ align-items:center;
 .clock{
 width:420px;
 height:420px;
-border:2px solid #fff;
+border:2px solid #b026ff;
 border-radius:50%;
 position:relative;
 }
 
-/* SPIDER */
+/* SPIDER CENTER */
 .spider{
 position:absolute;
 top:50%;
@@ -45,12 +45,12 @@ position:absolute;
 top:50%;
 left:50%;
 transform-origin:bottom;
-background:#b026ff;
 }
 
 .hour{
 width:6px;
 height:90px;
+background:#b026ff;
 }
 
 .minute{
@@ -62,39 +62,38 @@ background:#8be9fd;
 .second{
 width:2px;
 height:150px;
-background:#fff;
+background:white;
 }
 
 /* GEARS */
 .gear{
 position:absolute;
+width:120px;
+height:120px;
 border:2px solid #b026ff;
 border-radius:50%;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
 animation:spin 6s linear infinite;
-opacity:0.7;
+opacity:0.5;
 }
 
-.g1{width:120px;height:120px;top:10px;left:10px;}
-.g2{width:90px;height:90px;top:20px;right:20px;}
-.g3{width:140px;height:140px;bottom:10px;right:10px;}
-.g4{width:100px;height:100px;bottom:20px;left:20px;}
-
 @keyframes spin{
-from{transform:rotate(0deg);}
-to{transform:rotate(360deg);}
+from{transform:translate(-50%,-50%) rotate(0deg);}
+to{transform:translate(-50%,-50%) rotate(360deg);}
 }
 
 /* CODE BOX */
 .code{
-width:280px;
+width:250px;
 height:180px;
 border:1px solid #fff;
 color:#8be9fd;
 padding:10px;
-font-size:14px;
 }
 
-/* SIGNATURE */
+/* SIGN */
 .signature{
 position:fixed;
 bottom:10px;
@@ -102,5 +101,4 @@ left:50%;
 transform:translateX(-50%);
 color:#b026ff;
 letter-spacing:10px;
-text-shadow:0 0 10px #b026ff;
 }
